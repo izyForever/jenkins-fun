@@ -1,0 +1,26 @@
+#!/usr/bin/env groovy
+
+pipeline {
+    agent any
+    stages {
+        /* "Build" and "Test" stages omitted */
+
+        stage('Deploy - Staging') {
+            steps {
+                echo 'Hello world!'
+            }
+        }
+
+        stage('Sanity check') {
+            steps {
+                input "Does we make it?"
+            }
+        }
+
+        stage('Deploy - Production') {
+            steps {
+                echo 'Hello world!'
+            }
+        }
+    }
+}
