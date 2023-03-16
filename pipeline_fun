@@ -1,0 +1,24 @@
+#!/usr/bin/env groovy
+pipeline {
+    agent any
+    parameters {
+        string description: '''knock know, who am I?''', 
+        name: 'who', trim: true
+    }
+    stages {
+
+        stage('Have fun!') {
+            steps {
+                git branch: 'main', credentialsId: 'aoaoao', url: 'git@github.com:izyForever/jenkins-fun.git'
+                sh 'hello_jenkins.sh $who'
+                echo 'successfully!'
+            }
+        }
+
+    }
+    post {
+        always {
+            archiveArtifacts artifacts: 'build/msg.log', fingerprint: true
+        }
+    }
+}
