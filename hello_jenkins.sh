@@ -1,3 +1,3 @@
 #!/bin/bash
-export who=$n
+export who=$1
 echo "Hello Jenkins! Msg from ${who}"
