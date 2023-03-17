@@ -6,13 +6,13 @@ pipeline {
         string(name: 'who', description: 'knock know, who am I?', trim: true)
         string(name: 'logPath', description: 'the filePeth of log', trim: true)
     }
-    stages {
 
+    stages {
         stage('Have fun!') {
             steps {
                 git branch: 'main', credentialsId: 'aoaoao', url: 'git@github.com:izyForever/jenkins-fun.git'
                 sh './hello_jenkins.sh $who $logPath'
-                echo 'successfully!'
+                echo 'successfully!'         
             }
         }
 
