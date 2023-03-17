@@ -10,7 +10,7 @@ pipeline {
         stage('Have fun!') {
             steps {
                 git branch: 'main', credentialsId: 'aoaoao', url: 'git@github.com:izyForever/jenkins-fun.git'
-                sh 'hello_jenkins.sh $who'
+                sh './hello_jenkins.sh $who'
                 echo 'successfully!'
             }
         }
