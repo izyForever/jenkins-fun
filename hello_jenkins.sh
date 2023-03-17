@@ -1,3 +1,4 @@
 #!/bin/bash
 export who=$1
-echo "Hello Jenkins! Msg from ${who}"
+export logPath=$2
+echo "Hello Jenkins! Msg from ${who}" > $logPath
