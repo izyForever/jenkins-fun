@@ -1,2 +1,5 @@
 # jenkins-fun
-hello, jenkins
+
+**Hello, jenkins!**
+
+**Just for fun!**
